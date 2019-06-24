@@ -1,0 +1,21 @@
+bin/kafka-server-start.sh config/server.properties
+bin/kafka-server-stop.sh stop
+
+# list topic
+bin/kafka-topics.sh --zookeeper hadoop102:2181 --list
+
+# create topic
+bin/kafka-topics.sh --zookeeper hadoop102:2181 --create --replication-factor 3 --partitions 1 --topic first_topic
+# --topic 定义topic名
+# --replication-factor  定义副本数
+# --partitions  定义分区数
+
+# delete topic
+bin/kafka-topics.sh --zookeeper hadoop102:2181 --delete --topic first
+
+# send msg to topic
+bin/kafka-console-producer.sh --broker-list hadoop102:9092 --topic first_topic
+#
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic first_topic
+# show more details about topic
+bin/kafka-topics.sh --zookeeper hadoop102:2181 --describe --topic first_topic

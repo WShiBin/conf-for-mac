@@ -1,0 +1,25 @@
+# SwitchHosts!
+
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+
+
+# Hadoop
+192.168.3.102	hadoop102
+192.168.3.103	hadoop103
+192.168.3.104	hadoop104
+
+# Github
+
+151.101.72.133  assets-cdn.github.com
+151.101.73.194  github.global.ssl.fastly.net
+192.30.253.113  github.com
+11.238.159.92   git.node5.mirror.et2sqa
+
