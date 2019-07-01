@@ -29,6 +29,16 @@
     "last_refresh": null,
     "refresh_interval": 0,
     "include": []
+  }, {
+    "id": "1561430171660-245610",
+    "title": "Docker",
+    "content": "# Docker\n127.0.0.1       quickstart.cloudera",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": []
   }],
   "version": [3, 3, 12, 5349]
 }

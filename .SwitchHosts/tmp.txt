@@ -23,3 +23,7 @@
 192.30.253.113  github.com
 11.238.159.92   git.node5.mirror.et2sqa
 
+
+
+# Docker
+127.0.0.1       quickstart.cloudera
