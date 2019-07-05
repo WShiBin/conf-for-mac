@@ -11,6 +11,9 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" All operations such as yy, D, and P work with the clipboard
+set clipboard=unnamed
+
 " ctags
 set tags+=/usr/include/tags
 " fzf

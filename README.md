@@ -1,7 +1,6 @@
 ### 个人电脑配置文件
 
 > ./sync.sh 将本地配置文件同步到当前项目
->
 > ./install.sh 将当前配置文件同步到本地 **todo**
 
 * [.cheat](https://github.com/cheat/cheat) cheat配置
