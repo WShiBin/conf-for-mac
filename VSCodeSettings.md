@@ -1,4 +1,4 @@
 Settings Sync: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
-GitHub Token: 96062bb554747ee1b6371309bbc8cfabb9d3b2df
-GitHub Gist: 198b85f90df8d02f33a5e379d6c2a41a
+GitHub Token: d9748efa085b911016393a499f299e3bfb8f3cc9
+GitHub Gist: 93ab7f225213852dcea3bd3da446a66

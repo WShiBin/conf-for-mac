@@ -19,6 +19,11 @@ set tags+=/usr/include/tags
 " fzf
 set rtp+=/usr/local/opt/fzf
 
+" Change Vim cursor in different modes
+" iTerm2 on OS
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"    " Vertical bar in insert mode
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"    " Block in normal mode
+" let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -34,31 +39,7 @@ let NERDTreeShowHidden = 1
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-
 let g:ctrlp_custom_ignore = ''
 
 let g:coc_snippet_next = '<tab>'
 
-let g:lightline = {
-            \ 'colorscheme': 'wombat',
-            \ 'active': {
-            \   'left': [ ['mode', 'paste'],
-            \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-            \   'right': [ [ 'lineinfo' ], ['percent'] ]
-            \ },
-            \ 'component': {
-            \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-            \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-            \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-            \ },
-            \ 'component_visible_condition': {
-            \   'readonly': '(&filetype!="help"&& &readonly)',
-            \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-            \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-            \ },
-            \ 'component_function': {
-            \   'cocstatus': 'coc#status'
-            \ },
-            \ 'separator': { 'left': ' ', 'right': ' ' },
-            \ 'subseparator': { 'left': ' ', 'right': ' ' }
-            \ }

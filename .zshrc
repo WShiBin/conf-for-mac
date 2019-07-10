@@ -71,7 +71,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     # redis
     common-aliases
-    cp
+    cp  
     docker
     encode64
     extract
@@ -117,8 +117,8 @@ alias os=neofetch
 alias f=ranger
 alias typora="open -a typora"
 alias apps="cd /usr/local/Cellar"
+alias rm='rm'
 
-# Check listening ports
 whoseport () {
     lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
 }
@@ -148,7 +148,6 @@ export LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"
 export CPPFLAGS="-I/usr/local/opt/openssl/include $CPPFLAGS"
 export CPPFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include $CPPFLAGS"
 
-# for Homebrew
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
 # Options to fzf command
@@ -168,7 +167,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit && compinit
 # rm -f ~/.zcompdump; compinit
 
-# for Golang
+
 export GOPATH=/Users/ben/go
 export GOBIN=$GOPATH/bin
 export GOPROXY=https://goproxy.io
@@ -176,16 +175,12 @@ export GO111MODULE=on
 
 source /Users/ben/.oh-my-zsh/custom/plugins/fafka/kafka.zsh
 export PATH="/usr/local/sbin:$PATH"
-
-# for Flink
 export FLINK_HOME=/usr/local/Cellar/apache-flink/1.8.0
 export PATH=$PATH:$FLINK_HOME/bin:$FLINK_HOME/libexec/bin
 
-# for Hive
 export HIVE_HOME=/usr/local/Cellar/hive/3.1.1/libexec
 export PATH=$PATH:HIVE_HOME/bin
 
-# for Hadoop
 export HADOOP_HOME=/usr/local/Cellar/hadoop/3.1.2/libexec
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
@@ -195,8 +190,10 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH="/usr/local/opt/bzip2/bin:$PATH"
 
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+export PATH="/usr/local/opt/Protobufat25/bin:$PATH"
+export PATH="/usr/local/opt/bzip2/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
