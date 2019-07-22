@@ -1,0 +1,1 @@
+codesign --force --deep --sign - /Applications/AppName.app
