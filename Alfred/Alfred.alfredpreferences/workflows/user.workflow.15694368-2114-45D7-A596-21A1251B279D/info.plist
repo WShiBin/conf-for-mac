@@ -588,7 +588,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>~/Applications/JetBrains Toolbox/IntelliJ IDEA Ultimate.app</string>
+					<string>~/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/191.7479.19/IntelliJ IDEA.app</string>
 				</array>
 				<key>toggle</key>
 				<true/>
@@ -780,7 +780,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/Applications/XMind.app</string>
+					<string>/Applications/System Preferences.app</string>
 				</array>
 				<key>toggle</key>
 				<true/>
@@ -788,7 +788,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
-			<string>F1FAC2CA-981D-4CE9-8D91-3008A4CD3ECB</string>
+			<string>1F38F6D3-9F9E-4C68-AAFA-42738A437D92</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -859,7 +859,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>/Applications/System Preferences.app</string>
+					<string>/Applications/XMind.app</string>
 				</array>
 				<key>toggle</key>
 				<true/>
@@ -867,7 +867,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.launchfiles</string>
 			<key>uid</key>
-			<string>1F38F6D3-9F9E-4C68-AAFA-42738A437D92</string>
+			<string>F1FAC2CA-981D-4CE9-8D91-3008A4CD3ECB</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
