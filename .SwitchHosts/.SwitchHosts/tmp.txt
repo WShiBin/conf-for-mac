@@ -27,9 +27,3 @@
 
 # Docker
 127.0.0.1       quickstart.cloudera
-
-# vm
-192.168.3.4	ubuntu
-
-# work
-192.168.1.178	work

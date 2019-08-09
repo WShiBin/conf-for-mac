@@ -39,24 +39,6 @@
     "last_refresh": null,
     "refresh_interval": 0,
     "include": []
-  }, {
-    "id": "1564333562899-413756",
-    "title": "vm",
-    "content": "# vm\n192.168.3.4\tubuntu",
-    "on": true,
-    "where": "",
-    "last_refresh": null,
-    "refresh_interval": 0,
-    "include": []
-  }, {
-    "id": "1565144894618-863645",
-    "title": "work",
-    "content": "# work\n192.168.1.178\twork",
-    "on": true,
-    "where": "local",
-    "last_refresh": null,
-    "refresh_interval": 0,
-    "include": []
   }],
-  "version": [3, 4, 0, 5450]
+  "version": [3, 3, 12, 5349]
 }

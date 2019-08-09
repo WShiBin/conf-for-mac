@@ -1,0 +1,2 @@
+# use Preview to open specify manual of command
+man -t tmux | open -a Preview -f

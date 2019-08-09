@@ -19,7 +19,7 @@ set tags+=/usr/include/tags
 " fzf
 set rtp+=/usr/local/opt/fzf
 
-" Change Vim cursor in different modes
+" Change Vim cursor in different modes : https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes
 " iTerm2 on OS
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"    " Vertical bar in insert mode
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"    " Block in normal mode
@@ -42,4 +42,9 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 let g:ctrlp_custom_ignore = ''
 
 let g:coc_snippet_next = '<tab>'
+
+" Eliminating delays on ESC in vim : https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+set timeoutlen=1000 ttimeoutlen=0
+
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
