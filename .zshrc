@@ -119,6 +119,7 @@ alias typora="open -a typora"
 alias apps="cd /usr/local/Cellar"
 alias rm="rm"
 alias ldd="otool -L"
+alias wr="ssh shibin@192.168.1.178"
 
 whoseport () {
     lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
@@ -150,7 +151,9 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include $CPPFLAGS"
 export CPPFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include $CPPFLAGS"
 
 # homebrew bottle
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottlese"
+# brew install without updating
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Options to fzf command
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -212,9 +215,18 @@ export PATH="/usr/local/opt/openldap/sbin:$PATH"
 
 export LDFLAGS="-L/usr/local/opt/openldap/lib"
 export CPPFLAGS="-I/usr/local/opt/openldap/include"
-export PATH="/Users/ben/Library/Android/sdk/ndk-bundle:$PATH"
 
 
 export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 export CMAKE_LIBRARY_PATH=/tmp/lib
+
+export TERMINFO=/usr/share/terminfo
+export TERM=xterm-256color
+
+
+export PATH=${PATH}:~/Library/Android/sdk/ndk-bundle
+export PATH=${PATH}:~/Library/Android/sdk/platform-tools
+export PATH=${PATH}:~/Library/Android/sdk/tools
+export PATH=${PATH}:~/Library/Android/sdk/tools/bin
+

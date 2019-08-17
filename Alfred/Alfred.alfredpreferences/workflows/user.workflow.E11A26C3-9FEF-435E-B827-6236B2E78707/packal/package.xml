@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Eudic tool</name>
+  <version>1.2</version>
+  <bundle>xyz.cdpath.alfred</bundle>
+  <updated>1501419545</updated>
+  <file>eudic_pro.alfredworkflow</file>
+</workflow>
