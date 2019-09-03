@@ -70,6 +70,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     # redis
+    colored-man-pages
     common-aliases
     cp  
     docker
@@ -79,8 +80,11 @@ plugins=(
     golang
     history
     osx
+    ripgrep
+    thefuck
     tmux
     vi-mode
+    zsh_reload
 )
 
 source $ZSH/oh-my-zsh.sh

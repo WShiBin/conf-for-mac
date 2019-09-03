@@ -19,9 +19,5 @@ nc -x10.2.3.4:8080 -Xconnect -Pruser host.example.com 42
 # To choose the source IP for the testing using the -s option
 nc -zv -s source_IP target_IP Port
 
-# Install using Homebrew: brew install netcat
-# To start a server:
-nc -l -p 9999
-
-# To start a client:
-nc targethost 9999
+# connect to server
+nc -v localhost 9999
