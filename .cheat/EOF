@@ -1,0 +1,2 @@
+# 在终端输入,遇到EOF结束
+cat > Dockerfile <<EOF
