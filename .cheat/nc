@@ -21,3 +21,6 @@ nc -zv -s source_IP target_IP Port
 
 # connect to server
 nc -v localhost 9999
+
+# connect to unix server
+nc -U /var/run/socket

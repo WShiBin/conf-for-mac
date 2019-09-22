@@ -1,0 +1,22 @@
+# show the properties for the user
+id user_name
+
+# add / del user
+useradd user_name
+userdel user_name
+
+# change password for user_name
+passwd user_name
+
+# change the home dir for the user
+usermod -d /home/real_username user_name
+
+# change the arttribuite for the user
+chage
+
+# add 
+groupadd
+groupdel
+
+# switch to the user, and change the envrionment
+su - user_name

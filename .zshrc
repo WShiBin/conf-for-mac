@@ -125,8 +125,9 @@ alias apps="cd /usr/local/Cellar"
 alias rm="rm"
 alias ldd="otool -L"
 alias wr="ssh shibin@192.168.1.178"
+alias work="ssh work"
 
-whoseport () {
+whoseport() {
     lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
 }
 
@@ -156,7 +157,7 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include $CPPFLAGS"
 export CPPFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include $CPPFLAGS"
 
 # homebrew bottle
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottlese"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 # brew install without updating
 export HOMEBREW_NO_AUTO_UPDATE=1
 
@@ -235,3 +236,9 @@ export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 export PATH=${PATH}:~/Library/Android/sdk/tools
 export PATH=${PATH}:~/Library/Android/sdk/tools/bin
 
+initcppenv(){
+    mkdir .devcontainer && cd .devcontainer && \
+    wget https://raw.githubusercontent.com/ShiBin1990/conf-for-mac/master/continer_dev/.devcontainer/Dockerfile && \
+    wget https://raw.githubusercontent.com/shibin1990/conf-for-mac/master/continer_dev/.devcontainer/devcontainer.json && \
+    cd ..
+}
