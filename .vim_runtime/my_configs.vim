@@ -1,4 +1,10 @@
+set hidden
 set number
+set nowritebackup
+set cmdheight=2 " Better display for messages
+set updatetime=300 " You will have bad experience for diagnostic messages when it's default 4000.
+set shortmess+=c " don't give |ins-completion-menu| messages.
+set signcolumn=yes " always show signcolumns
 set background=light " colorscheme solarized
 set cmdheight=2 " Better display for messages
 set foldlevelstart=99
@@ -12,7 +18,7 @@ map <Up> <Nop>
 map <Down> <Nop>
 
 " All operations such as yy, D, and P work with the clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " ctags
 set tags+=/usr/include/tags
@@ -39,12 +45,8 @@ let NERDTreeShowHidden = 1
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-let g:ctrlp_custom_ignore = ''
-
-let g:coc_snippet_next = '<tab>'
+" let g:ctrlp_custom_ignore = ''
 
 " Eliminating delays on ESC in vim : https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
-
-autocmd FileType json syntax match Comment +\/\/.\+$+
 

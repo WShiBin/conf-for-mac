@@ -1,0 +1,9 @@
+md5             /path/to/file
+shasum -a  1    /path/to/file
+shasum -a  256  /path/to/file
+shasum -a  512  /path/to/file
+
+openssl md5     /path/to/file
+openssl sha1    /path/to/file
+openssl sha256  /path/to/file
+openssl sha512  /path/to/file
