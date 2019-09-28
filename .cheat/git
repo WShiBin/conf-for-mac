@@ -1,9 +1,9 @@
-# To set your identity:
+# To set your identity:system/global/local
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 
 # To set your editor:
-git config --global core.editor emacs
+git config --global core.editor vim
 
 # To enable color:
 git config --global color.ui true
@@ -149,3 +149,9 @@ git revert <commit SHA>
 # Pich a commit from a branch to current branch. This is different than merge as
 # this just applies a single commit from a branch to current branch
 git cherry-pick <commit SHA1>
+
+
+git log
+git log --all
+git log master --oneline --graph # 显示master分支的log
+git log master --oneline --graph -n4 # 显示最近的4次提交的log
