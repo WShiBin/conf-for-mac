@@ -1,75 +1,69 @@
 {
-    "list": [
-        {
-            "id": "1558917367869-323375",
-            "title": "My hosts",
-            "content": "# My hosts",
-            "on": false
-        },
-        {
-            "id": "1558917367869-260704",
-            "title": "backup",
-            "content": "##\n# Host Database\n#\n# localhost is used to configure the loopback interface\n# when the system is booting.  Do not change this entry.\n##\n127.0.0.1\tlocalhost\n255.255.255.255\tbroadcasthost\n::1             localhost\n",
-            "on": true
-        },
-        {
-            "id": "1558917387503-395387",
-            "title": "Hadoop",
-            "content": "# Hadoop\n192.168.3.102\thadoop102\n192.168.3.103\thadoop103\n192.168.3.104\thadoop104",
-            "on": true,
-            "where": "local",
-            "url": "",
-            "last_refresh": null,
-            "refresh_interval": 0,
-            "include": []
-        },
-        {
-            "id": "1560484109855-90223",
-            "title": "Github",
-            "content": "# Github\n\n151.101.72.133  assets-cdn.github.com\n151.101.73.194  github.global.ssl.fastly.net\n192.30.253.113  github.com\n11.238.159.92   git.node5.mirror.et2sqa\n\n",
-            "on": true,
-            "where": "local",
-            "url": "",
-            "last_refresh": null,
-            "refresh_interval": 0,
-            "include": []
-        },
-        {
-            "id": "1561430171660-245610",
-            "title": "Docker",
-            "content": "# Docker\n127.0.0.1       quickstart.cloudera",
-            "on": true,
-            "where": "local",
-            "url": "",
-            "last_refresh": null,
-            "refresh_interval": 0,
-            "include": []
-        },
-        {
-            "id": "1564333562899-413756",
-            "title": "vm",
-            "content": "# vm\n192.168.3.4\tubuntu",
-            "on": true,
-            "where": "",
-            "last_refresh": null,
-            "refresh_interval": 0,
-            "include": []
-        },
-        {
-            "id": "1565144894618-863645",
-            "title": "work",
-            "content": "# work\n192.168.1.178\twork",
-            "on": true,
-            "where": "local",
-            "last_refresh": null,
-            "refresh_interval": 0,
-            "include": []
-        }
-    ],
-    "version": [
-        3,
-        4,
-        0,
-        5450
-    ]
+  "list": [{
+    "id": "1558917367869-323375",
+    "title": "My hosts",
+    "content": "# My hosts",
+    "on": false,
+    "children": []
+  }, {
+    "id": "1558917367869-260704",
+    "title": "backup",
+    "content": "##\n# Host Database\n#\n# localhost is used to configure the loopback interface\n# when the system is booting.  Do not change this entry.\n##\n127.0.0.1\tlocalhost\n255.255.255.255\tbroadcasthost\n::1             localhost\n",
+    "on": true,
+    "children": []
+  }, {
+    "id": "1558917387503-395387",
+    "title": "Hadoop",
+    "content": "# Hadoop\n192.168.3.102\thadoop102\n192.168.3.103\thadoop103\n192.168.3.104\thadoop104",
+    "on": false,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": [],
+    "children": []
+  }, {
+    "id": "1560484109855-90223",
+    "title": "Github",
+    "content": "# Github\n\n# 151.101.72.133  assets-cdn.github.com\n# 151.101.73.194  github.global.ssl.fastly.net\n# 192.30.253.113  github.com\n# 11.238.159.92   git.node5.mirror.et2sqa\n\n151.101.76.249 \t\t\t\t\tgithub.global.ssl.fastly.net \n192.30.253.112 \t\t\t\t\tgithub.com\n\n151.101.72.249 github.global.ssl.fastly.net  \n192.30.253.112 github.com",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": [],
+    "children": []
+  }, {
+    "id": "1561430171660-245610",
+    "title": "Docker",
+    "content": "# Docker\n127.0.0.1       quickstart.cloudera",
+    "on": true,
+    "where": "local",
+    "url": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": [],
+    "children": []
+  }, {
+    "id": "1564333562899-413756",
+    "title": "vm",
+    "content": "# vm\n192.168.3.4\tubuntu",
+    "on": true,
+    "where": "",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": [],
+    "children": []
+  }, {
+    "id": "1565144894618-863645",
+    "title": "work",
+    "content": "# work\n192.168.1.178\twork\n\n",
+    "on": true,
+    "where": "local",
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": [],
+    "children": []
+  }],
+  "version": [3, 5, 0, 5486]
 }

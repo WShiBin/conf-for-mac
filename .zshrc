@@ -9,6 +9,7 @@ export ZSH="/Users/ben/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,19 +71,21 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     # redis
+    # thefuck
     colored-man-pages
     common-aliases
     cp  
     docker
     encode64
     extract
+    fzf
     git
     golang
     history
     osx
     ripgrep
-    thefuck
     tmux
+    tmuxinator
     vi-mode
     zsh_reload
 )
@@ -126,6 +129,7 @@ alias rm="rm"
 alias ldd="otool -L"
 alias wr="ssh shibin@192.168.1.178"
 alias work="ssh work"
+alias t="tmux"
 
 whoseport() {
     lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
@@ -162,29 +166,26 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Options to fzf command
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_COMPLETION_OPTS='+c -x'
+[ -f ~/.config/fzf/fzf.zsh ] && source ~/.config/fzf/fzf.zsh
 
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
-}
-
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
-
+# zsh autosuggestions / zsh completions / zsh syntax highlighting
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
+bindkey '^ ' autosuggest-accept
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit && compinit
 # rm -f ~/.zcompdump; compinit
-
+#
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # for golang
+export GOROOT=/usr/local/Cellar/go/1.13.1/libexec
 export GOPATH=/Users/ben/go
 export GOBIN=$GOPATH/bin
-export GOPROXY=https://goproxy.io
 export GO111MODULE=on
+export GOPROXY=https://goproxy.io
+# export GOPROXY=http://mirrors.aliyun.com/goproxy/
 export PATH=$PATH:$GOPATH/bin
 
 # for flink
@@ -222,19 +223,20 @@ export PATH="/usr/local/opt/openldap/sbin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openldap/lib"
 export CPPFLAGS="-I/usr/local/opt/openldap/include"
 
-
 export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
+# CMake
 export CMAKE_LIBRARY_PATH=/tmp/lib
 
 export TERMINFO=/usr/share/terminfo
 export TERM=xterm-256color
 
-
+# Android
 export PATH=${PATH}:~/Library/Android/sdk/ndk-bundle
 export PATH=${PATH}:~/Library/Android/sdk/platform-tools
 export PATH=${PATH}:~/Library/Android/sdk/tools
 export PATH=${PATH}:~/Library/Android/sdk/tools/bin
+export ANDROID_NDK_ROOT=~/Library/Android/sdk/ndk-bundle
 
 initcppenv(){
     mkdir .devcontainer && cd .devcontainer && \
@@ -242,3 +244,13 @@ initcppenv(){
     wget https://raw.githubusercontent.com/shibin1990/conf-for-mac/master/continer_dev/.devcontainer/devcontainer.json && \
     cd ..
 }
+export PATH="/Users/ben/FaJue/Workspace:$PATH"
+
+
+export CHEAT_COLORS=true
+export CHEAT_COLORSCHEME=light # must be 'light' (default) or 'dark'
+
+source "$(navi widget zsh)"
+
+# tmux title
+export DISABLE_AUTO_TITLE=true
