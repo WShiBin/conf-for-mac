@@ -118,18 +118,17 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias zshconfig="vim ~/.zshrc"
-alias sourcezshrc="source ~/.zshrc"
-alias os="neofetch"
-alias f="ranger"
-alias b="brew"
-alias typora="open -a typora"
 alias apps="cd /usr/local/Cellar"
-alias rm="rm"
+alias b="brew"
+alias c="clear"
+alias f="ranger"
 alias ldd="otool -L"
-alias wr="ssh shibin@192.168.1.178"
-alias work="ssh work"
+alias os="neofetch"
 alias t="tmux"
+alias typora="open -a typora"
+alias work="ssh work"
+alias wr="ssh shibin@192.168.1.178"
+alias rm="rm"
 
 whoseport() {
     lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
@@ -180,11 +179,12 @@ autoload -U compinit && compinit
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # for golang
-export GOROOT=/usr/local/Cellar/go/1.13.1/libexec
+export GOROOT=/usr/local/Cellar/go/1.13.3/libexec
 export GOPATH=/Users/ben/go
 export GOBIN=$GOPATH/bin
 export GO111MODULE=on
 export GOPROXY=https://goproxy.io
+# alibaba mirrors
 # export GOPROXY=http://mirrors.aliyun.com/goproxy/
 export PATH=$PATH:$GOPATH/bin
 
@@ -238,7 +238,7 @@ export PATH=${PATH}:~/Library/Android/sdk/tools
 export PATH=${PATH}:~/Library/Android/sdk/tools/bin
 export ANDROID_NDK_ROOT=~/Library/Android/sdk/ndk-bundle
 
-initcppenv(){
+initdevenv(){
     mkdir .devcontainer && cd .devcontainer && \
     wget https://raw.githubusercontent.com/ShiBin1990/conf-for-mac/master/continer_dev/.devcontainer/Dockerfile && \
     wget https://raw.githubusercontent.com/shibin1990/conf-for-mac/master/continer_dev/.devcontainer/devcontainer.json && \
@@ -254,3 +254,13 @@ source "$(navi widget zsh)"
 
 # tmux title
 export DISABLE_AUTO_TITLE=true
+
+# enter tmux
+# tmuxinator start $USER
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/curl-openssl/lib/pkgconfig"
+
+

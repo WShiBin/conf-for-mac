@@ -1,0 +1,6 @@
+
+# show all os and platform that can be support
+go tool dist list
+
+# build for linux with arm architecture
+CGO_ENABLED=0 GOARCH=arm GOOS=linux go build

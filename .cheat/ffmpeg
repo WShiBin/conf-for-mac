@@ -21,4 +21,19 @@ ffmpeg -i video.ext -i audio.ext -c:v copy -c:a copy output.ext
 # -autoexit : closes ffplay as soon as the audio finishes
 ffmpeg -ss 00:34:24.85 -t 10 -i path/to/file.mp4 -f mp3 pipe:play | ffplay -i pipe:play -autoexit
 
-ffmpeg -i input.mp4 -crf 20 output.mp4
+
+# record screen
+# -f lib
+# -i input devices
+# -r 30 frame
+# out.yuv out put file
+ffmpeg -f avfoundation -i 1 -r 30 out.yuv
+ffmpeg -f avfoundation -i :1 out.wav
+
+# show all devices that can be capture
+ffmpeg -f avfoundation -list_devices true -i ""
+
+# converte with codec
+ffmpeg -i input.mp4 output1.avi
+# converte without codec
+ffmpeg -i input.mp4 -vcodec copy -acodec copy output2.avi

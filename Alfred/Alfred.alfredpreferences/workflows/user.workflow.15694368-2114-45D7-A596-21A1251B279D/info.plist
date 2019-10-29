@@ -86,6 +86,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8FCF3725-4C06-4910-AE64-4FB20107D8B9</key>
+		<array/>
 		<key>957F30DC-45FF-47B6-93B6-D26CA6EE66ED</key>
 		<array>
 			<dict>
@@ -586,6 +588,54 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>8FCF3725-4C06-4910-AE64-4FB20107D8B9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/DingTalk.app</string>
+				</array>
+				<key>toggle</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>8685DBBB-EF6C-407D-96C2-EAD1EF26C40E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>paths</key>
 				<array>
 					<string>~/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/191.7479.19/IntelliJ IDEA.app</string>
@@ -780,6 +830,23 @@
 			<dict>
 				<key>paths</key>
 				<array>
+					<string>/System/Applications/System Preferences.app</string>
+				</array>
+				<key>toggle</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>1F38F6D3-9F9E-4C68-AAFA-42738A437D92</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
 					<string>/Applications/XMind ZEN.app</string>
 				</array>
 				<key>toggle</key>
@@ -853,23 +920,6 @@
 			<string>B5DA157E-A7FB-4DD5-B601-EDDA9BB5AB86</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>paths</key>
-				<array>
-					<string>/Applications/System Preferences.app</string>
-				</array>
-				<key>toggle</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.launchfiles</string>
-			<key>uid</key>
-			<string>1F38F6D3-9F9E-4C68-AAFA-42738A437D92</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -967,12 +1017,26 @@
 			<key>ypos</key>
 			<integer>250</integer>
 		</dict>
+		<key>8685DBBB-EF6C-407D-96C2-EAD1EF26C40E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>890</integer>
+			<key>ypos</key>
+			<integer>270</integer>
+		</dict>
 		<key>89A329F8-6142-4CCE-9C0B-D4EDFEAAF1A3</key>
 		<dict>
 			<key>xpos</key>
 			<integer>70</integer>
 			<key>ypos</key>
 			<integer>580</integer>
+		</dict>
+		<key>8FCF3725-4C06-4910-AE64-4FB20107D8B9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>270</integer>
 		</dict>
 		<key>957F30DC-45FF-47B6-93B6-D26CA6EE66ED</key>
 		<dict>

@@ -289,7 +289,7 @@ set -g status-justify left
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
-# unbind C-a
+unbind C-a
 # unbind C-b
 # set -g prefix C-a
 # bind C-a send-prefix
@@ -312,3 +312,6 @@ set-option -g default-command "reattach-to-user-namespace -l zsh"
 set-option -g prefix C-Space
 unbind C-Space
 bind C-Space send-prefix
+
+
+bind C-s set-window-option synchronize-panes
