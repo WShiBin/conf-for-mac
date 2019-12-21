@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3208A820-93D3-45FA-A5D3-18B58DD7746A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F8735757-49A0-4AC5-99DC-D049CF4CC591</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>363E6923-2360-465F-A79D-3C6402219BCC</key>
 		<array>
 			<dict>
@@ -741,6 +754,54 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
+				<integer>35</integer>
+				<key>hotmod</key>
+				<integer>524288</integer>
+				<key>hotstring</key>
+				<string>P</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>3208A820-93D3-45FA-A5D3-18B58DD7746A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/System/Applications/Preview.app</string>
+				</array>
+				<key>toggle</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>F8735757-49A0-4AC5-99DC-D049CF4CC591</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
 				<integer>2</integer>
 				<key>hotmod</key>
 				<integer>524288</integer>
@@ -954,6 +1015,13 @@
 			<key>ypos</key>
 			<integer>360</integer>
 		</dict>
+		<key>3208A820-93D3-45FA-A5D3-18B58DD7746A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>725</integer>
+			<key>ypos</key>
+			<integer>390</integer>
+		</dict>
 		<key>363E6923-2360-465F-A79D-3C6402219BCC</key>
 		<dict>
 			<key>xpos</key>
@@ -1135,6 +1203,13 @@
 			<integer>560</integer>
 			<key>ypos</key>
 			<integer>470</integer>
+		</dict>
+		<key>F8735757-49A0-4AC5-99DC-D049CF4CC591</key>
+		<dict>
+			<key>xpos</key>
+			<integer>885</integer>
+			<key>ypos</key>
+			<integer>390</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

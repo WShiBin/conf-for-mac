@@ -84,6 +84,8 @@ plugins=(
     history
     osx
     ripgrep
+    rust
+    timer
     tmux
     tmuxinator
     vi-mode
@@ -93,7 +95,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export MANPATH="/usr/local/man:$MANPATH"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -128,6 +130,16 @@ alias t="tmux"
 alias typora="open -a typora"
 alias work="ssh work"
 alias wr="ssh shibin@192.168.1.178"
+alias rc="rm -rf ./*"
+alias dkps="docker ps -a"
+alias dkst="docker stats"
+alias dkpsa="docker ps -a"
+alias dkimgs="docker images"
+alias dkcpup="docker-compose up -d"
+alias dkcpdown="docker-compose down"
+alias dkcpstart="docker-compose start"
+alias dkcpstop="docker-compose stop"
+alias strace="dtrace"
 alias rm="rm"
 
 whoseport() {
@@ -149,16 +161,6 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
-# export LDFLAGS="-L/usr/local/opt/readline/lib $LDFLAGS"
-# export CPPFLAGS="-I/usr/local/opt/readline/include $CPPFLAGS"
-# export LDFLAGS="-L/usr/local/opt/sqlite/lib $LDFLAGS"
-# export CPPFLAGS="-I/usr/local/opt/sqlite/include $CPPFLAGS"
-# export LDFLAGS="-L/usr/local/opt/ncurses/lib $LDFLAGS"
-# export CPPFLAGS="-I/usr/local/opt/ncurses/include $CPPFLAGS"
-export LDFLAGS="-L/usr/local/opt/openssl/lib $LDFLAGS"
-export CPPFLAGS="-I/usr/local/opt/openssl/include $CPPFLAGS"
-export CPPFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include $CPPFLAGS"
-
 # homebrew bottle
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 # brew install without updating
@@ -172,6 +174,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
 bindkey '^ ' autosuggest-accept
 
+fpath+=~/.zfunc
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit && compinit
 # rm -f ~/.zcompdump; compinit
@@ -179,14 +182,14 @@ autoload -U compinit && compinit
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # for golang
-export GOROOT=/usr/local/Cellar/go/1.13.3/libexec
+export GOROOT=/usr/local/Cellar/go/1.13.4/libexec
 export GOPATH=/Users/ben/go
 export GOBIN=$GOPATH/bin
 export GO111MODULE=on
 export GOPROXY=https://goproxy.io
+export PATH=$PATH:$GOPATH/bin
 # alibaba mirrors
 # export GOPROXY=http://mirrors.aliyun.com/goproxy/
-export PATH=$PATH:$GOPATH/bin
 
 # for flink
 export PATH="/usr/local/sbin:$PATH"
@@ -202,7 +205,6 @@ export HADOOP_HOME=/usr/local/Cellar/hadoop/3.1.2/libexec
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
-export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
@@ -223,10 +225,9 @@ export PATH="/usr/local/opt/openldap/sbin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openldap/lib"
 export CPPFLAGS="-I/usr/local/opt/openldap/include"
 
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 # CMake
-export CMAKE_LIBRARY_PATH=/tmp/lib
+# export CMAKE_LIBRARY_PATH=/tmp/lib
 
 export TERMINFO=/usr/share/terminfo
 export TERM=xterm-256color
@@ -247,20 +248,34 @@ initdevenv(){
 export PATH="/Users/ben/FaJue/Workspace:$PATH"
 
 
-export CHEAT_COLORS=true
-export CHEAT_COLORSCHEME=light # must be 'light' (default) or 'dark'
-
-source "$(navi widget zsh)"
+# export CHEAT_COLORS=true
+# export CHEAT_COLORSCHEME=light # must be 'light' (default) or 'dark'
 
 # tmux title
 export DISABLE_AUTO_TITLE=true
 
 # enter tmux
 # tmuxinator start $USER
-export PATH="/usr/local/opt/openssl/bin:$PATH"
 
+# openssl
+# For compilers to find openssl you may need to set:
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export PKG_CONFIG_PATH="/usr/local/opt/curl-openssl/lib/pkgconfig"
+
+# For pkg-config to find openssl you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
+
+source $HOME/.cargo/env
+
+# export CHEAT_CONFIG_PATH="~/.dotfiles/cheat/conf.yml"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export BAT_THEME=ansi-light

@@ -7,6 +7,8 @@
 	ui = true
 [http]
 	postBuffer = 524288000
-	proxy = http://127.0.0.1:7890
+	; proxy = http://127.0.0.1:7890
 [https]
-	proxy = https://127.0.0.1:7890
+	; proxy = https://127.0.0.1:7890
+[credential]
+	helper = cache

@@ -9,6 +9,7 @@ set background=light " colorscheme solarized
 set cmdheight=2 " Better display for messages
 set foldlevelstart=99
 
+map <leader>c <C-W>c
 map <C-c> :q<cr>
 
 " let arrow key not work
@@ -24,6 +25,8 @@ map <Down> <Nop>
 set tags+=/usr/include/tags
 " fzf
 set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/bin/fzf
+" set rtp+=/usr/local/opt/fzf
 
 " Change Vim cursor in different modes : https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes
 " iTerm2 on OS
@@ -43,10 +46,26 @@ let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden = 1
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " let g:ctrlp_custom_ignore = ''
 
 " Eliminating delays on ESC in vim : https://www.johnhawthorn.com/2012/09/vi-escape-delays/
 set timeoutlen=1000 ttimeoutlen=0
 
+set ttymouse=sgr
+set updatetime=500
+set balloondelay=250
+set signcolumn=yes
+
+autocmd! BufEnter,BufNewFile *.go syntax on
+autocmd! BufLeave *.go syntax off
+set autoindent
+set smartindent
+filetype indent on
+set backspace=2
+" Suggestion: show info for completion candidates in a popup menu
+if has("patch-8.1.1904")
+    set completeopt+=popup
+    set completepopup=align:menu,border:off,highlight:Pmenu
+endif

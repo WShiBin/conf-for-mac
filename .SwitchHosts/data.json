@@ -64,6 +64,17 @@
     "refresh_interval": 0,
     "include": [],
     "children": []
+  }, {
+    "id": "1572335125314-925045",
+    "title": "Mac",
+    "content": "# Mac\n127.0.0.1\tshibin",
+    "on": true,
+    "where": "local",
+    "folder_mode": 0,
+    "last_refresh": null,
+    "refresh_interval": 0,
+    "include": [],
+    "children": []
   }],
   "version": [3, 5, 0, 5486]
 }
