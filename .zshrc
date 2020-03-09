@@ -8,7 +8,8 @@ export ZSH="/Users/ben/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -85,7 +86,7 @@ plugins=(
     osx
     ripgrep
     rust
-    timer
+    # timer
     tmux
     tmuxinator
     vi-mode
@@ -120,27 +121,28 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias t="tmux"
+# alias c="clear"
 alias apps="cd /usr/local/Cellar"
 alias b="brew"
-alias c="clear"
-alias f="ranger"
-alias ldd="otool -L"
-alias os="neofetch"
-alias t="tmux"
-alias typora="open -a typora"
-alias work="ssh work"
-alias wr="ssh shibin@192.168.1.178"
-alias rc="rm -rf ./*"
-alias dkps="docker ps -a"
-alias dkst="docker stats"
-alias dkpsa="docker ps -a"
-alias dkimgs="docker images"
-alias dkcpup="docker-compose up -d"
+alias c="code"
 alias dkcpdown="docker-compose down"
 alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
-alias strace="dtrace"
+alias dkcpup="docker-compose up -d"
+alias dkimgs="docker images"
+alias dkps="docker ps -a"
+alias dkpsa="docker ps -a"
+alias dkst="docker stats"
+alias f="ranger"
+alias ldd="otool -L"
+alias os="neofetch"
+alias rc="rm -rf ./*"
 alias rm="rm"
+alias strace="dtrace"
+alias t="open -a typora"
+alias work="ssh work"
+alias wr="ssh shibin@192.168.1.178"
 
 whoseport() {
     lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
@@ -162,12 +164,15 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 # homebrew bottle
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+# export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 # brew install without updating
 export HOMEBREW_NO_AUTO_UPDATE=1
+# disable for Analytics
+export HOMEBREW_NO_ANALYTICS=1
 
 # Options to fzf command
-[ -f ~/.config/fzf/fzf.zsh ] && source ~/.config/fzf/fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # zsh autosuggestions / zsh completions / zsh syntax highlighting
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -178,11 +183,12 @@ fpath+=~/.zfunc
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit && compinit
 # rm -f ~/.zcompdump; compinit
-#
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# git-extras
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 # for golang
-export GOROOT=/usr/local/Cellar/go/1.13.4/libexec
+# export GOROOT=/usr/local/Cellar/go/1.13.8/libexec
 export GOPATH=/Users/ben/go
 export GOBIN=$GOPATH/bin
 export GO111MODULE=on
@@ -274,8 +280,16 @@ source $HOME/.cargo/env
 
 # export CHEAT_CONFIG_PATH="~/.dotfiles/cheat/conf.yml"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/curl/bin:$PATH"
+# export PATH="/usr/local/opt/curl/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export BAT_THEME=ansi-light
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
+
+export LDFLAGS="-L/usr/local/opt/qt/lib"
+export CPPFLAGS="-I/usr/local/opt/qt/include"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/qt/lib/pkgconfig"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+

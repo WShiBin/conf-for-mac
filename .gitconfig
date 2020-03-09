@@ -3,6 +3,7 @@
 	email = 15519900807@qq.com
 [core]
 	editor = vim
+	excludesfile = /Users/ben/.gitignore_global
 [color]
 	ui = true
 [http]
@@ -11,4 +12,14 @@
 [https]
 	; proxy = https://127.0.0.1:7890
 [credential]
-	helper = cache
+	helper = store
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/ben/.stCommitMsg
+[diff]
+	tool = vimdiff

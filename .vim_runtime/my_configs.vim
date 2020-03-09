@@ -25,8 +25,6 @@ map <Down> <Nop>
 set tags+=/usr/include/tags
 " fzf
 set rtp+=/usr/local/opt/fzf
-" set rtp+=/usr/local/bin/fzf
-" set rtp+=/usr/local/opt/fzf
 
 " Change Vim cursor in different modes : https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes
 " iTerm2 on OS
@@ -69,3 +67,6 @@ if has("patch-8.1.1904")
     set completeopt+=popup
     set completepopup=align:menu,border:off,highlight:Pmenu
 endif
+
+nnoremap <C-W>M <C-W>\| <C-W>_
+nnoremap <C-W>m <C-W>=
